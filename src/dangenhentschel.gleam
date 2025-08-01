@@ -66,14 +66,13 @@ fn view(model: Colour) {
     _ -> 40
   }
 
-  div([class("mx-auto w-max py-8")], [
+  div([class("mx-auto md:w-max py-8")], [
     h1([class("text-3xl mb-4 text-center capitalize")], [
       text("He's " <> string.capitalise(model.name) <> " For An Amazing Reason"),
     ]),
     svg.svg(
       [
-        class("rounded-md mx-auto mb-4"),
-        attr("width", "600"),
+        class("rounded-md mx-auto h-auto w-full lg:w-[600px] mb-4"),
         attr("viewBox", "0 0 400 533"),
       ],
       [
