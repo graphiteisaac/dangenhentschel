@@ -2,20 +2,25 @@
   "name": "dangenhentschel",
   "version": "1.0.0",
   "description": "He's red for an amazing reason...",
-  "main": "index.js",
+  "type": "module",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build": "gleam run -m lustre/dev build --minify && mkdir -p dist && cp index.html dist/index.html && cp -r priv dist/priv && sed -i 's|.mjs|.min.mjs|g; s|.css|.min.css|g' dist/index.html"
+    "dev": "vite",
+    "build": "vite build",
+    "_build": "gleam run -m lustre/dev build --minify && mkdir -p dist && cp index.html dist/index.html && cp -r priv dist/priv && sed -i 's|.mjs|.min.mjs|g; s|.css|.min.css|g' dist/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "trustedDependencies": [
-	"@chouquette/gleam"
+    "@chouquette/gleam"
   ],
   "dependencies": {
-    "@chouquette/gleam": "^1.11.1"
+    "@chouquette/gleam": "^1.11.1",
+    "@tailwindcss/vite": "^4.1.11",
+    "vite": "^7.0.6",
+    "vite-gleam": "^0.4.3"
   }
 }
