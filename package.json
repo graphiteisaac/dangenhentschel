@@ -12,6 +12,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "trustedDependencies": [
+	"@chouquette/gleam"
+  ],
   "dependencies": {
     "@chouquette/gleam": "^1.11.1"
   }
