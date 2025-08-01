@@ -6025,7 +6025,7 @@ function init(hash) {
       let _pipe$1 = find2(_pipe, (x) => {
         return x.hex === hash;
       });
-      return unwrap(_pipe$1, new Colour("Red", "#e50000"));
+      return unwrap(_pipe$1, new Colour("red", "#e50000"));
     })(),
     none()
   ];
@@ -6036,7 +6036,7 @@ function update2(model, msg) {
     let _pipe = colours;
     let _pipe$1 = shuffle(_pipe);
     let _pipe$2 = first(_pipe$1);
-    _block = unwrap(_pipe$2, new Colour("Failure", "#f00"));
+    _block = unwrap(_pipe$2, new Colour("red", "#e50000"));
     let found = _block;
     return [found, update_hash_effect(found.hex)];
   } else if (msg instanceof UserSetColour) {
@@ -6047,7 +6047,7 @@ function update2(model, msg) {
         let _pipe$1 = find2(_pipe, (x) => {
           return x.hex === hex;
         });
-        return unwrap(_pipe$1, new Colour("Failure", "#f00"));
+        return unwrap(_pipe$1, new Colour("red", "#e50000"));
       })(),
       update_hash_effect(hex)
     ];

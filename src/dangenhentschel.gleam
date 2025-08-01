@@ -22,7 +22,7 @@ fn init(hash: String) {
   #(
     colours
       |> list.find(fn(x) { x.hex == hash })
-      |> result.unwrap(Colour(name: "Red", hex: "#e50000")),
+      |> result.unwrap(Colour(name: "red", hex: "#e50000")),
     effect.none(),
   )
 }
@@ -40,13 +40,13 @@ fn update(model, msg) {
         colours
         |> list.shuffle
         |> list.first
-        |> result.unwrap(Colour(name: "Failure", hex: "#f00"))
+        |> result.unwrap(Colour(name: "red", hex: "#e50000"))
       #(found, update_hash_effect(found.hex))
     }
     UserSetColour(hex) -> #(
       colours
         |> list.find(fn(x) { x.hex == hex })
-        |> result.unwrap(Colour(name: "Failure", hex: "#f00")),
+        |> result.unwrap(Colour(name: "red", hex: "#e50000")),
       update_hash_effect(hex),
     )
     _ -> #(model, effect.none())
