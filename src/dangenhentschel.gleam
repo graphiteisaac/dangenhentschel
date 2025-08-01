@@ -110,11 +110,11 @@ fn view(model: Colour) {
           ]),
         ]),
         svg.image([
-          attribute.href("/priv/static/grass.jpg"),
+          attribute.href("/grass.jpg"),
           attr("width", "100%"),
         ]),
         svg.image([
-          attribute.href("/priv/static/grass.jpg"),
+          attribute.href("/grass.jpg"),
           attr("width", "100%"),
           attr("filter", "url(#spotlight)"),
           attr("mask", "url(#face)"),
